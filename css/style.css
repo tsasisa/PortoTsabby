@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* warnanya bisa dipake terus tgl panggil nama sesuai yang udah di assign */
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+
+    
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background:var(--bg-color);
+    color:var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    opacity: 80%;
+
+}
+
+.header-box{
+    background-color: var(--bg-color);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+}
+
+.navbar a:hover{
+    color:var(--main-color)
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color)
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    text-align: center;
+
+}
+
+.home {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 9%; 
+    min-height: 100vh; 
+   
+} 
+
+ .home-content {
+    flex: 1; 
+    text-align: left; 
+    max-width: 600px; 
+}
+
+.home-img {
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-end; 
+    text-align: right;
+}
+
+.home-img img {
+    width: 35vw; 
+    height: auto; 
+    max-width: 750px; 
+    max-height: 80vh; 
+    box-shadow: 0 4px 15px rgba(134, 243, 250, 0.5); 
+    border-radius: 20px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.home-content h3{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    color:var(--main-color);
+}
+
+.home-content h1{
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+.portofolio{
+    background: var(--second-bg-color);
+}
+
+.portofolio h2{
+    margin-bottom: 4rem;
+    font-size: 5rem;
+    text-align: center;
+}
+.portfolio-box{
+    align-items: center;
+    text-align: center;
+}
+
+.portofolio-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portofolio-layer{
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.portofolio-layer h4{
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.portofolio-layer p{
+    margin-top: 7px;
+    font-size: 1.3rem;
+}
+
+.portofolio-container .portfolio-box{
+    position:relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    display: flex;
+}
+
+.portfolio-box img {
+    width: 640px; 
+    height: 426px;
+    object-fit: cover; 
+    border-radius: 20px; 
+}
+
+.portofolio-layer a{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color:var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.portofolio-layer a:hover{
+    box-shadow: none;
+}
+
+.docum h2{
+    margin-bottom: 4rem;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.docum-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.docum-container .docum-box{
+    flex:  1 1 30rem;
+    background: var(--second-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+}
+
+.docum-box a{
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: rgba(255, 255, 255, 0.7); 
+    text-align: center; 
+    padding: 5rem 0; 
+    position: relative;  
+    bottom: 0; 
+    width: 100%; 
+}
+
+.footer p {
+    margin: 0; 
+    font-size: 1.5rem; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+/* for responsiveness menu icon */
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer{
+        padding: 2rem 3%;
+    }
+
+}
+
+@media (max-width: 768px){
+    #menu-icon{
+        display:block;
+    }
+
+    .header{
+        opacity: 100%;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,2);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+
+    }
+
+    .portfolio-box img{
+        width: 70vw;
+        margin-top: 4rem;
+        
+    }
+}
+
+
+
+
